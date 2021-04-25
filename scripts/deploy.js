@@ -1,10 +1,10 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Lambro = await hre.ethers.getContractFactory("Lambro");
-  const lambro = await Lambro.deploy();
-  await lambro.deployed();
-  console.log("Lambro deployed to:", lambro.address);
+  const JustATest = await hre.ethers.getContractFactory("JustATest");
+  const justATest = await JustATest.deploy();
+  await justATest.deployed();
+  console.log("JustATest deployed to:", justATest.address);
 }
 
 main()
