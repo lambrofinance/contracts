@@ -10,12 +10,19 @@ task("accounts", "Prints the list of accounts", async () => {
 });
 
 module.exports = {
-  solidity: "0.8.3",
+  solidity: {
+    version: "0.5.16",
+    settings: {
+      optimizer: {
+        enabled: true,
+      },
+    },
+  },
   networks: {
-    ropsten: {
-      url: `https://ropsten.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
-      accounts: [`0x${process.env.ROPSTEN_PRIVATE_KEY}`],
+    testnet: {
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      chainId: 97,
+      accounts: [`0x${process.env.BSC_TESTNET_PRIVATE_KEY}`],
     },
   },
 };
-
