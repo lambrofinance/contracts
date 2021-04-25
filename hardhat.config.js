@@ -20,6 +20,11 @@ module.exports = {
     },
   },
   networks: {
+    mainnet: {
+      url: "https://bsc-dataseed.binance.org",
+      chainId: 56,
+      accounts: [`0x${process.env.BSC_MAINNET_PRIVATE_KEY}`],
+    },
     testnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
       chainId: 97,
