@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-etherscan");
 require("dotenv").config();
 
 task("accounts", "Prints the list of accounts", async () => {
@@ -24,5 +25,8 @@ module.exports = {
       chainId: 97,
       accounts: [`0x${process.env.BSC_TESTNET_PRIVATE_KEY}`],
     },
+  },
+  etherscan: {
+    apiKey: process.env.BSCSCAN_API_KEY,
   },
 };
