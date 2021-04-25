@@ -336,7 +336,7 @@ contract Ownable is Context {
   }
 }
 
-contract JustATest is Context, IBEP20, Ownable {
+contract Lambro is Context, IBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -349,8 +349,8 @@ contract JustATest is Context, IBEP20, Ownable {
   string private _name;
 
   constructor() public {
-    _name = "Just A Test";
-    _symbol = "JAT";
+    _name = "Lambro";
+    _symbol = "LAMBRO";
     _decimals = 18;
     _totalSupply = 1000000 * (10 ** 18);
     _balances[msg.sender] = _totalSupply;
