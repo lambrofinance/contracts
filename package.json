@@ -6,7 +6,8 @@
     "clean": "rm -rf artifacts cache node_modules",
     "network": "hardhat node",
     "compile": "hardhat compile",
-    "deploy": "hardhat run scripts/deploy.js"
+    "deploy": "hardhat run scripts/deploy.js",
+    "verify": "hardhat verify"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
