@@ -352,7 +352,7 @@ contract JustATest is Context, IBEP20, Ownable {
     _name = "Just A Test";
     _symbol = "JAT";
     _decimals = 18;
-    _totalSupply = 1000000;
+    _totalSupply = 1000000 * (10 ** 18);
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
